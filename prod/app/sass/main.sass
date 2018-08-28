@@ -1,0 +1,699 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: #74bd88
+	color: #fff
+
+html, body
+	height: 100%
+	
+h1,h2,h3,h4,h5,h6
+    //font-family: "$default-font" , sans-serif
+    font-weight: normal
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				background-color: #ff4f27
+			&:required:valid
+				background-color: #54c361
+				color: #fff
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+.head_menu
+	position: reletive 
+	min-height: 100px
+	background-image: url(/img/bg_menu.jpg) 
+	background-repeat: no-repeat
+	background-size: cover
+	z-index: 1
+	.bg_color
+		min-height: 100px
+		background-color: rgba(117,118,117,.7)
+		.logo
+			display: block
+			padding-top: 28px
+			position: relative
+			img
+				width: 220px
+		+media-breakpoint-down(lg)
+			.logo
+				width: 900px
+				height: auto
+				text-align: center
+				img
+					width: 350px
+		+media-breakpoint-down(md)
+			.logo
+				width: 720px
+		+media-breakpoint-down(sm)
+			.logo
+				width: 540px
+				img
+					width: 250px
+		+media-breakpoint-down(xs)
+			.logo
+				width: 400px
+				img
+					width: 200px
+				
+.menu_top
+	li	
+		padding-top: 33px
+		list-style-type: none
+		display: inline-block
+		margin: 0px 7px
+		font-family: 'Roboto-Regular' , sans-serif
+		font-size: 18px
+		color: #fff
+		a
+			color: #fff
+			text-decoration: none
+			&:hover
+				border-bottom: #fff 3px solid
+				transition: all .20s ease
++media-breakpoint-down(lg)
+	.menu_top
+		text-align: center
+		li	
+			padding-top: 20px
+			font-size: 23px
+			margin: 0px 8px
++media-breakpoint-down(md)
+	.menu_top
+		li
+			font-size: 20px
+			padding-top: 20px
+
+.language
+	padding-top: 32px
+	color: #fff
+	font-size: 16px
+	font-family: 'Roboto-Regular' , sans-serif
+	.active
+		background-color: #4e4e4e
+
+.language		
+	li
+		border-radius: 4px
+		border: 1px solid #3d3d3d
+		text-align: center
+		min-width: 70px
+		background-color: #9a9e98
+		display: inline-block
+		margin: 0 3px
+		list-style-type: none
+		a	
+			text-decoration: none	
+			color: #fff
+			&:hover
+				color: #ae8402
++media-breakpoint-down(lg)
+	.language
+		text-align: center
+		width: 900px
+		padding-top: 0px
++media-breakpoint-down(md)
+	.language
+		width: 720px
++media-breakpoint-down(sm)
+	.language
+		width: 540px
++media-breakpoint-down(xs)
+	.language
+		width: 400px		
+
+
+.bg_img_top
+	min-height: 578px
+	background: url("/img/bg_top.jpg") no-repeat
+	background-size: cover
+	.top_tex
+		float: right
+		padding-top: 165px
+		text-align: center
+		h1
+			font-size: 40px
+			font-family: 'Roboto-Regular' , sans-serif 
+			color: #fff
++media-breakpoint-down(lg)
+	.top_tex
+		h1
+			margin-top: 10px
+			background: rgba(33, 125, 5, 0.8)
+			border-radius: 2px		
++media-breakpoint-down(xs)			
+	.top_tex
+		img
+			width: 300px
+
+
+.content
+	.img_con
+		display: block
+		max-width: 100%
+		margin-top: -135px
+		height: auto
+		img 
+			max-width: 100%
+			height: auto
+	.content_1
+		position: relative
+		padding-top: 123px
+		h1
+			font-family: 'Bitter', sans-serif
+			color: #203202
+			font-size: 60px
+			line-height: 72px
+			background-color: #fff
+		p
+			padding-top: 55px
+			font-family: 'Roboto-Regular' , sans-serif
+			font-size: 30px
+			color: #535352
+			line-height: 36px
+	+media-breakpoint-down(lg)
+		.content_1
+			margin-left: 20px
+			padding-top: 60px
+			text-align: center
+			h1
+				font-size: 40px
+				line-height: 60px
+			p 
+				font-size: 22px
+	+media-breakpoint-down(md)
+		.img_con
+			display: none
+		.content_1
+			text-align: center
+			padding-top: 40px
+			padding-bottom: 30px
+			box-shadow: 0px 56px 53px -80px rgba(0,0,0,0.75)
+	+media-breakpoint-down(xs)
+		.content_1
+			box-shadow: 0px 56px 53px -80px rgba(0,0,0,0.75)
+			h1
+				line-height: 50px
+				font-size: 25px
+			p 
+				padding-bottom: 30px
+				padding-top: 30px
+				font-size: 18px
+			
+
+.content_2
+	padding-top: 120px
+	.container-fluid
+		padding-right: 0px
+		.product
+			display: block
+			margin-left: 130px	
+			h1
+				margin-top: 206px
+				font-family: 'Bitter', sans-serif
+				font-size: 48px
+				line-height: 48px
+				color: #203202
+			p
+				margin-top: 55px
+				font-family: 'Roboto-Regular' , sans-serif
+				font-size: 24px
+				line-height: 48px
+				color: #535352
+				line-height: 30px
+				span	
+					font-size: 30px
+					color: #006837
+		.img_voice
+			display: block
+			position: relative
+			background: url(/img/voice.png) no-repeat center top
+			min-height: 712px 
+			.bg_color 
+				min-height: 712px
+				background-color: rgba(56,101,44,.22)
+			p
+				color: #ffff01
+				font-size: 60px
+				font-family: 'Roboto-Black' , sans-serif
+    			bottom: 22px
+				margin-top: -90px
+				margin-left: 20px
++media-breakpoint-down(lg)
+	.content_2
+		padding-top: 60px
+		position: relative
+		.container-fluid
+			padding-right: 0px
+			.product
+				margin-top: -100px
+				display: block
+				margin-left: 0px
+				position: absolute
+				text-align: center		
+				h1
+					font-size: 35px
+					line-height: 50px
+				p
+					font-size: 20px
+					line-height: 25px
+			.img_voice
+					padding-bottom: 50px
++media-breakpoint-down(md)
+	.content_2
+		padding-top: 120px
+		.container-fluid
+			padding-left: 0px
+			padding-right: 0px
+			.product
+				padding-bottom: 40px
+				margin-top: 0px	
+				margin-left: 0px
+				position: relative
+
+				h1
+					margin-top: 0px
+					font-size: 40px
+					line-height: 50px
+				p
+					font-size: 20px
+					line-height: 35px
+
++media-breakpoint-down(xs)
+	.content_2
+		.container-fluid
+			.product
+				h1
+					font-size: 25px
+					line-height: 50px
+				p
+					font-size: 18px
+					line-height: 35px
+					padding-bottom: 25px
+					span
+						font-size: 24px
+
+
+
+.content_3
+	padding-top: 120px
+	.rop3
+		.img_left 
+			display: block
+			position: relative
+			background: url(/img/technology.jpg) no-repeat 
+			min-height: 609px
+			background-size: cover
+		.img_right
+			position: relative
+			.fon_right
+				display: block
+				min-height: 474px
+				background-image: url(/img/gear.png)
+				background-position: right bottom 
+				background-repeat: no-repeat
+				position: relative
+				margin-top: -393px
+			h1	
+				min-height: 100px	
+				font-size: 48px
+				font-family: 'Bitter', sans-serif	 
+				color: #203202	
+				line-height: 48px		
+			h4	
+				font-size: 24px	
+				font-family: 'Roboto-Regular' , sans-serif	 
+				color: #38652c	
+			p	
+				margin-top: -7px
+				font-size: 18px
+				font-family: 'Roboto-Regular' , sans-serif 
+				color: #535352
+				line-height: 20px
++media-breakpoint-down(lg)
+	.content_3
+		padding-top: 30px
+		.rop3		
+			.img_right		
+				h1	
+					min-height: 0px	
+					font-size: 35px
+				h4
+					font-size: 19px		 	
+				p
+					margin-top: -3px
+					font-size: 15px
+					line-height: 20px	
++media-breakpoint-down(md)
+	.content_3
+		box-shadow: 0px -9px 13px -11px rgba(0,0,0,0.75)
+		padding-top: 70px
+		.rop3
+			.img_right
+				margin-top: 30px
+				text-align: center
+				h1
+					font-size: 40px
+				h4 
+					font-size: 25px
+				p 
+					font-size: 16px
+					line-height: 25px
++media-breakpoint-down(xs)
+	.content_3
+		box-shadow: 0px 0px 14px -1px rgba(0,0,0,0.75)
+		padding-bottom: 30px			
+		.rop3
+			.img_right
+				h1 
+					font-size: 25px
+				h4 
+					font-size: 20px
+				p
+					margin-top: 20px
+					font-size: 15px
+					line-height: 20px
+				.fon_right
+					display: none
+
+.content_4
+	.tex_blok_l
+		margin-left: 130px
+		h4
+			font-size: 24px	
+			font-family: 'Roboto-Regular' , sans-serif	 
+			color: #38652c
+		p
+			margin-top: -4px
+			font-size: 18px
+			font-family: 'Roboto-Regular' , sans-serif 
+			color: #535352
+			line-height: 20px	
+	.tex_blok_R
+		h4
+			font-size: 24px	
+			font-family: 'Roboto-Regular' , sans-serif	 
+			color: #38652c
+		p
+			margin-top: -4px
+			font-size: 18px
+			font-family: 'Roboto-Regular' , sans-serif 
+			color: #535352
+			line-height: 20px		
++media-breakpoint-down(lg)
+	.content_4
+		.tex_blok_l
+			margin-left: 10px
+			h4
+				font-size: 20px
+			p 
+				font-size: 16px
+		.tex_blok_R
+			h4 
+				font-size: 20px
+			p 
+				font-size: 16px
++media-breakpoint-down(md)
+	.content_4
+		text-align: center
+		.tex_blok_l
+			margin-left: 0px
+			h4 
+				font-size: 25px
+			p
+				font-size: 16px
+		.tex_blok_R
+			h4 
+				font-size: 25px
+			p 
+				font-size: 16px
++media-breakpoint-down(xs)
+	.content_4
+		padding-top: 30px
+		.tex_blok_l
+			margin-left: 0px
+			h4 
+				font-size: 20px
+			p
+				font-size: 15px
+		.tex_blok_R
+			h4 
+				font-size: 20px
+			p 
+				margin-top: 20px
+				font-size: 15px
+				line-height: 20px
+
+.content_5
+	margin-top: 120px
+	position: relative
+	background: url(/img/cena.png) no-repeat 
+	min-height: 600px
+	background-size: cover
+	&:before
+		content: ''
+		position: absolute
+	&:before
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		background-color: rgba( 11, 146, 79, 0.65)			
+	.top_text_5
+		text-align: center
+		margin-top: 30px
+		position: relative
+		h1
+			margin-top: -25px
+			font-family: 'Bitter', sans-serif
+			font-size: 48px
+			color: #fff
+	.center_text_5
+		padding-top: 65px
+		.prais_1
+			text-align: center
+			img
+				max-width: 100%
+    			height: auto
+			h5
+				margin-top: 10px
+				font-size: 20px	
+				font-family: 'Roboto-Regular' , sans-serif	 
+				color: #fcee21
+				span
+					text-decoration: underline
+			p
+				font-size: 18px	
+				font-family: 'Roboto-Regular' , sans-serif	 
+				color: #fff				
+				line-height: 20px
+	.text_center_6
+		padding: 40px 0 35px 0
+		.prais_2
+			text-align: center
+			img
+				max-width: 100%
+    			height: auto
+			h5
+				margin-top: 10px
+				font-size: 20px	
+				font-family: 'Roboto-Regular' , sans-serif	 
+				color: #fcee21
+				span		
+					text-decoration: underline
+			p
+				font-size: 18px	
+				font-family: 'Roboto-Regular' , sans-serif	 
+				color: #fff				
+				line-height: 20px
++media-breakpoint-down(lg)
+	.content_5
+		margin-top: 60px
+		.top_text_5
+			h1
+				margin-top: 0px
+				font-size: 38px
++media-breakpoint-down(md)
+	.content_5
+		.top_text_5
+			h1
+				font-size: 30px
++media-breakpoint-down(xs)
+	.content_5
+		.top_text_5
+			h1
+				font-size: 25px	
+		.center_text_5		
+			.prais_1
+				margin-bottom: 35px
+				p
+					font-size: 16px
+					line-height: 25px
+		.text_center_6
+			.prais_2
+				margin-bottom: 35px
+				p
+					font-size: 16px
+					line-height: 25px				
+
+.content_6
+	padding: 120px 0
+	.img_footer
+		display: block
+		width: 100%
+		max-width: 350px
+		margin: 0 auto
+		img 
+			max-width: 100%
+			height: auto
+	.footer_text
+		margin: 0 15px
+		h1
+			font-size: 36px
+			color: #203202
+			font-family: 'Bitter', sans-serif
+			line-height: 30px
+		p
+			font-size: 24px	
+			font-family: 'Roboto-Regular' , sans-serif	 
+			color: #535352				
+			line-height: 24px
+			margin-top: 40px
+	.obratka
+		.container 
+			font-family: 'Roboto-Regular' , sans-serif
+			margin: 10px auto 20px  
+			max-width: 400px  
+			display: table  
+			background: #FFF  
+			border: 2px solid #38652c  
+			padding: 20px 5px
+			font-size: 14px
+			box-shadow: 0 5px 7px 7px rgba(0,0,0,.20)
+		p
+			font-family: 'Roboto-Regular' , sans-serif
+			font-size: 12px
+			text-align: center
+			margin-top: 10px
+			color: #535352
+ 
+		input[type="text"], input[type="email"], input[type="password"],
+		input[type="file"], select, textarea  
+			background-color: #fff  
+			box-sizing: border-box   
+			color: #333   
+			float: none  
+			border: 2px solid #38652c        
+			padding: 6px 10px  
+			height: 38px  
+			width: 100%  
+			line-height: 1.3
+			margin-top: 15px  
+ 
+		textarea  
+			height: 100px  
+		
+		input[type="submit"]
+			text-align: center 
+			margin-top: 10px  
+			background-color: #4c7441  
+			border: 1px solid #0f3d2b  
+			color: #fff  
+			font-size: 15px  
+			padding: 10px 80px
+		
+		input[type="submit"]:hover  
+			margin-top: 10px  
+			cursor: pointer  
+			background-color: #6ca35d  
+			border: 1px solid #ddd  
+			color: #333  
+			font-size: 15px 
++media-breakpoint-down(lg)
+	.content_6
+		padding: 35px 0
+		.img_footer
+			margin-bottom: 30px
+			text-align: center
+			img
+				width: 50%
+		.footer_text
+			h1
+				font-size: 25px
+			p
+				font-size: 20px
++media-breakpoint-down(md)
+	.content_6
+		.img_footer
+			text-align: center
+			img
+				width: 50%
+		.footer_text
+			text-align: center
+			h1
+				font-size: 30px
+				line-height: 40px
+			p
+				font-size: 20px	
+		.obratka
+			.container
+				text-align: center
++media-breakpoint-down(md)
+	.content_6
+		.footer_text
+			h1 
+				font-size: 25px
+				line-height: 40px
+			p
+				font-size: 17px		
+
+
+
+.footer	
+	background-color: #e1e8e0
+	.left
+		font-size: 14px
+		font-family: 'Roboto-Regular' , sans-serif
+		margin: 21px 0 0px 0
+		color: #938e8e
+	.right
+		font-size: 15px
+		font-family: 'Adventure' , sans-serif
+		margin: 21px 0 0px 0
+		color: #938e8e
+		float: right
+
+
+
+
+
+
+
+
+
+
+				
+
+
+@import "media" // Always at the end
